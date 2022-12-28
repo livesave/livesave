@@ -1,12 +1,17 @@
 import React from 'react';
 import { HashRouter as Router, Link } from 'react-router-dom';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu } from 'antd';
+import { SmileOutlined } from '@ant-design/icons';
 import './layout.css';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-class RootLayout extends React.Component {
+interface DialogContent {
+    children: React.ReactNode
+}
+
+class RootLayout extends React.Component<DialogContent> {
     render() {
         return (
             <Layout className="all-layout">
@@ -26,7 +31,7 @@ class RootLayout extends React.Component {
                                     key="sub1"
                                     title={
                                         <span>
-                                            <Icon type="monitor" />
+                                            <SmileOutlined type="monitor" />
                                             LiveClient
                                         </span>
                                     }

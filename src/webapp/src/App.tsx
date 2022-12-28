@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import 'antd/dist/antd.css';
 import { Switch, Route } from 'react-router-dom';
 import RootLayout from './component/layout/index';
 import LiveList from './component/live-list/index';

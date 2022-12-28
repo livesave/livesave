@@ -55,17 +55,17 @@ class AddRoomDialog extends React.Component<Props> {
     render() {
         const { visible, confirmLoading, ModalText } = this.state;
         return (
-            <div>
+            (<div>
                 <Modal
                     title="添加直播间"
-                    visible={visible}
+                    open={visible}
                     onOk={this.handleOk}
                     confirmLoading={confirmLoading}
                     onCancel={this.handleCancel}>
                     <p>{ModalText}</p>
                     <Input size="large" placeholder="https://" onChange={this.textChange}/>
                 </Modal>
-            </div>
+            </div>)
         );
     }
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Divider, PageHeader, Table, Tag } from 'antd';
+import { Button, Divider, Table, Tag } from 'antd';
+import { PageHeader } from '@ant-design/pro-components';
 import PopDialog from '../pop-dialog/index';
 import AddRoomDialog from '../add-room-dialog/index';
 import API from '../../utils/api';
@@ -259,7 +260,7 @@ class LiveList extends React.Component<Props, IState> {
                 <Table className="item-pad" columns={
                     (this.state.window.screen.width > 768) ? this.columns : this.smallColums}
                     dataSource={this.state.list}
-                    size={(this.state.window.screen.width > 768) ? "default" : "middle"}
+                    size={(this.state.window.screen.width > 768) ? "large" : "middle"}
                     pagination={false} />
             </div>
         );
