@@ -1,6 +1,6 @@
 import React from "react";
 import API from '../../utils/api';
-import { PageHeader } from 'antd';
+import { PageHeader } from '@ant-design/pro-components';
 import { Descriptions } from 'antd';
 
 const api = new API();
