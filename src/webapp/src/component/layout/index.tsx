@@ -7,11 +7,7 @@ import './layout.css';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-interface DialogContent {
-    children: React.ReactNode
-}
-
-class RootLayout extends React.Component<DialogContent> {
+class RootLayout extends React.Component<any> {
     render() {
         return (
             <Layout className="all-layout">
