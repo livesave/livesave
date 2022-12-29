@@ -7,7 +7,11 @@ import './layout.css';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-class RootLayout extends React.Component<any> {
+interface MyParams {
+    children?: React.ReactNode
+}
+
+class RootLayout extends React.Component<MyParams> {
     render() {
         return (
             <Layout className="all-layout">

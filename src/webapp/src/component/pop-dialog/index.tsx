@@ -5,7 +5,7 @@ import React from 'react';
 interface DialogContent {
     title: string,
     onConfirm?: (e?: React.MouseEvent<HTMLElement>) => void,
-    children: any
+    children?: React.ReactNode
 }
 
 class PopDialog extends React.Component<DialogContent> {
