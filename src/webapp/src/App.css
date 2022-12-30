@@ -2,12 +2,14 @@
   text-align: center;
 }
 
+/* https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window */
 .all-layout{
-  height: 100%;
+  height: 100vh;
 }
 
 .logo-text{
   color: white;
+  line-height: 32px;
 }
 
 .App-logo {

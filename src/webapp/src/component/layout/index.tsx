@@ -1,17 +1,13 @@
 import React from 'react';
 import { HashRouter as Router, Link } from 'react-router-dom';
+import { MonitorOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
-import { SmileOutlined } from '@ant-design/icons';
 import './layout.css';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-interface MyParams {
-    children?: React.ReactNode
-}
-
-class RootLayout extends React.Component<MyParams> {
+class RootLayout extends React.Component {
     render() {
         return (
             <Layout className="all-layout">
@@ -31,7 +27,7 @@ class RootLayout extends React.Component<MyParams> {
                                     key="sub1"
                                     title={
                                         <span>
-                                            <SmileOutlined type="monitor" />
+                                            <MonitorOutlined />
                                             LiveClient
                                         </span>
                                     }
@@ -55,7 +51,7 @@ class RootLayout extends React.Component<MyParams> {
                     </Router>
                 </Layout>
             </Layout>
-        )
+        );
     }
 }
 

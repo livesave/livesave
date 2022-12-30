@@ -52,7 +52,7 @@ class LiveInfo extends React.Component<Props, IState> {
     render() {
         return (
             <div>
-                <div style={{ backgroundColor: '#F5F5F5', }}>
+                <div style={{ backgroundColor: '#FFFFFF', }}>
                     <PageHeader
                         ghost={false}
                         title="系统状态"

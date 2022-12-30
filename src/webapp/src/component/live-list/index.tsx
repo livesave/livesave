@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Divider, Table, Tag } from 'antd';
 import { PageHeader } from '@ant-design/pro-components';
+import { Button, Divider, Table, Tag } from 'antd';
 import PopDialog from '../pop-dialog/index';
 import AddRoomDialog from '../add-room-dialog/index';
 import API from '../../utils/api';
@@ -243,7 +243,7 @@ class LiveList extends React.Component<Props, IState> {
     render() {
         return (
             <div>
-                <div style={{ backgroundColor: '#F5F5F5', }}>
+                <div style={{ backgroundColor: '#FFFFFF', }}>
                     <PageHeader
                         ghost={false}
                         title="直播间列表"
@@ -260,7 +260,7 @@ class LiveList extends React.Component<Props, IState> {
                 <Table className="item-pad" columns={
                     (this.state.window.screen.width > 768) ? this.columns : this.smallColums}
                     dataSource={this.state.list}
-                    size={(this.state.window.screen.width > 768) ? "large" : "middle"}
+                    size={(this.state.window.screen.width > 768) ? "large" : "small"}
                     pagination={false} />
             </div>
         );
