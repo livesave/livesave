@@ -35,7 +35,7 @@ generate:
 
 .PHONY: build-web
 build-web:
-	cd ./src/webapp && yarn install && yarn build && cd ../../
+	cd ./src/webapp && pnpm install && pnpm build && cd ../../
 
 .PHONY: run
 run:
