@@ -17,6 +17,7 @@ jobs:
         with:
             node-version: 18
             cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
       - name: Build Web Page
         run: make build-web
       - name: Build go binaries

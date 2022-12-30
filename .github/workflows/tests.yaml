@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: 18
           cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
       - name: Build
         run: make build-web bililive
   test:
@@ -37,6 +38,7 @@ jobs:
         with:
           node-version: 18
           cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
       - name: Test
         run: make build-web test
       - name: Codecov
