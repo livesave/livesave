@@ -17,14 +17,14 @@ import (
 	"github.com/hr3lxphr6j/bililive-go/src/pkg/utils"
 
 	"github.com/robertkrimen/otto"
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 	"github.com/tidwall/gjson"
 )
 
 /*
-	From https://github.com/zhangn1985/ykdl
+From https://github.com/zhangn1985/ykdl
 
-	Thanks
+Thanks
 */
 const (
 	domain = "www.douyu.com"
@@ -253,7 +253,7 @@ func (l *Live) getSignParams() (map[string]string, error) {
 	if _, err := engine.Eval(jsDebug); err != nil {
 		return nil, err
 	}
-	did := strings.ReplaceAll(uuid.Must(uuid.NewV4()).String(), "-", "")
+	did := strings.ReplaceAll(uuid.Must(uuid.NewV4(), err).String(), "-", "")
 	ts := time.Now()
 	res, err := engine.Call("ub98484234", nil, l.roomID, did, ts.Unix())
 	if err != nil {

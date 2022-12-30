@@ -18,6 +18,9 @@ jobs:
           go-version: 1.19
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
       - name: Build
         run: make build-web bililive
   test:
@@ -31,6 +34,9 @@ jobs:
           go-version: 1.19
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
       - name: Test
         run: make build-web test
       - name: Codecov
