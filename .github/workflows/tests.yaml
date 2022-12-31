@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'pnpm'
       - name: Build
         run: make build-web bililive
   test:
@@ -43,6 +44,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'pnpm'
       - name: Test
         run: make build-web test
       - name: Codecov
