@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           cache: 'pnpm'
       - name: Build
         run: make build-web bililive
@@ -43,7 +43,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           cache: 'pnpm'
       - name: Test
         run: make build-web test
