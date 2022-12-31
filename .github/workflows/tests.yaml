@@ -25,7 +25,6 @@ jobs:
         with:
           node-version: 18
           cache: 'pnpm'
-          cache-dependency-path: '${{github.workspace}}/src/webapp/pnpm-lock.json'
       - name: Build
         run: make build-web bililive
   test:
@@ -46,7 +45,6 @@ jobs:
         with:
           node-version: 18
           cache: 'pnpm'
-          cache-dependency-path: '${{github.workspace}}/src/webapp/pnpm-lock.json'
       - name: Test
         run: make build-web test
       - name: Codecov
